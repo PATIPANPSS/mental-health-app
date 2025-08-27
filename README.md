@@ -15,3 +15,8 @@ If you are developing a production application, we recommend using TypeScript wi
 //////////////
 mental-health-app
 //////////////
+
+////mongodb/////
+mongodb+srv://adminuser:adminpassword@cluster0.im9bkki.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+--password:  <adminpassword>

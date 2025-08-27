@@ -8,21 +8,21 @@ import Navbar from "./components/Navbar";
 import FormPage from "./pages/FormPage";
 import HotlinePage from "./pages/HotlinePage";
 import Ebook from "./pages/Ebook";
+import AddEbook from "./pages/AddEbook";
+import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
+import DefaultLayout from "./components/DefaultLayout";
 
 
 function App() {
   return (
     <Router>
       <div className="bg-gray-50 font-sans">
-        <Navbar />
-        <main>
           <Routes>
-            <Route path="/" element="/" />
-            <Route path="/form" element={<FormPage />} />
-            <Route path="/hotline" element={<HotlinePage />} />
-            <Route path="/ebook" element={<Ebook />} />
+            <Route path="/dashboard/*" element={<Dashboard />} />
+
+            <Route path="*" element={<DefaultLayout />} />
           </Routes>
-        </main>
       </div>
     </Router>
   );

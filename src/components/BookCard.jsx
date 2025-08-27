@@ -1,6 +1,6 @@
 import React from "react";
 
-const BookCard = ({ title, description, bookLink, imageUrl }) => {
+const BookCard = ({ title, bookLink, imageUrl }) => {
   return (
     <a
       href={bookLink}
