@@ -40,7 +40,7 @@ const AddEbook = () => {
       setTitle("");
       setBookLink("");
       setImageFile(null);
-      navigate("/ebook");
+      navigate("/book-list");
     } catch (err) {
       setMessage(`Error: ${err.message}`);
       console.error("Error adding e-book:", err);
@@ -51,7 +51,10 @@ const AddEbook = () => {
   return (
     <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)]">
       <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-200">
-        <h1 className="text-4xl font-bold text-blue-700 mb-8 text-center">
+        <div>
+            <button onClick={() => navigate(-1)}className="hover:bg-gray-300 hover:text-white py-2 px-4 rounded-sm text-gray-500">Back</button>
+        </div>
+        <h1 className="text-4xl font-bold mb-8 text-center">
           เพิ่ม E-book
         </h1>
         <form onSubmit={handleSubmit} className="space-x-6 max-w-lg mx-auto">
@@ -97,7 +100,7 @@ const AddEbook = () => {
               id="imgFile"
               accept="image/*"
               onChange={(e) => setImageFile(e.target.files[0])}
-              className="mt-1 block w-full text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 hover:file:bg-blue-100 file:text-blue-700"
+              className="mt-1 block w-full border border-gray-300 rounded-md text-gray-700 file:mr-4 file:py-2 file:px-4 file:text-sm file:bg-gray-100 hover:file:bg-gray-200"
             />
           </div>
           <button

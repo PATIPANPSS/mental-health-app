@@ -1,8 +1,23 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [isSldebar, setIsSidebar] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  const handleLogOut = () => {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  };
+  
   return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100">
       {/* Mobile Sidebar Toggle Button */}
@@ -96,7 +111,7 @@ const Dashboard = () => {
           <ul className="space-x-2 md:space-x-0 space-y-2 md:space-y-3">
             <li>
               <Link
-                to="/ebook"
+                to="/book-list"
                 className="flex py-3 md:px-4 px-30 text-lg font-medium hover:bg-blue-950 transition duration-200 hover:scale-105"
               >
                 จัดการ E-book
@@ -123,7 +138,10 @@ const Dashboard = () => {
 
             <div className="mt-auto pt-6 border-t border-indigo-700 text-gray-300 text-sm">
               <div className="text-center">
-                <button className="bg-red-500 px-4 py-2 rounded-sm cursor-pointer">
+                <button
+                  onClick={handleLogOut}
+                  className="bg-red-500 px-4 py-2 rounded-sm cursor-pointer"
+                >
                   LogOut
                 </button>
               </div>
@@ -156,16 +174,16 @@ const Dashboard = () => {
               </div>
               <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4  mt-auto">
                 <Link
-                  to="/info"
+                  to="/ebook"
                   className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 lg:px-2 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center"
                 >
                   ดู E-book
                 </Link>
                 <Link
-                  to="/add-ebook"
+                  to="/book-list"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center"
                 >
-                  เพิ่ม E-book
+                  จัดการ E-book
                 </Link>
               </div>
             </div>

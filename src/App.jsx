@@ -1,17 +1,11 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-
-import FormPage from "./pages/FormPage";
-import HotlinePage from "./pages/HotlinePage";
-import Ebook from "./pages/Ebook";
-import AddEbook from "./pages/AddEbook";
-import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import DefaultLayout from "./components/DefaultLayout";
+import BookList from "./pages/BookList";
+import AddEbook from "./pages/AddEbook";
+import EditEbook from "./pages/EditEbook";
+import LoginPage from "./pages/LoginPage";
 
 
 function App() {
@@ -19,7 +13,11 @@ function App() {
     <Router>
       <div className="bg-gray-50 font-sans">
           <Routes>
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/dashboard/*" element={<Dashboard />} />
+            <Route path="/book-list" element={<BookList />} />
+            <Route path="/add-ebook" element={<AddEbook />} />
+            <Route path='/edit-ebook/:id' element={<EditEbook />} />
 
             <Route path="*" element={<DefaultLayout />} />
           </Routes>
