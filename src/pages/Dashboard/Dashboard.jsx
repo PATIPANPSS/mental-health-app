@@ -20,44 +20,6 @@ const Dashboard = () => {
   
   return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100">
-      {/* Mobile Sidebar Toggle Button */}
-      {/* <div className="bg-blue-400 text-white p-4 flex justify-between items-center md:hidden">
-        <h2 className="text-xl font-bold">Dashboard</h2>
-        <button onClick={() => setIsSidebar(!isSldebar)}>
-          {isSldebar ? (
-            
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          )}
-        </button>
-      </div> */}
 
       {/* Sidebar */}
       <aside className="w-full md:w-64 bg-blue-900 text-white shadow-xl flex flex-col p-4">

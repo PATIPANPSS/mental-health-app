@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import DefaultLayout from "./components/DefaultLayout";
-import BookList from "./pages/BookList";
-import AddEbook from "./pages/AddEbook";
-import EditEbook from "./pages/EditEbook";
-import LoginPage from "./pages/LoginPage";
+import BookList from "./pages/Dashboard/BookList";
+import AddEbook from "./pages/Dashboard/AddEbook";
+import EditEbook from "./pages/Dashboard/EditEbook";
+import LoginPage from "./pages/Dashboard/LoginPage";
 
 
 function App() {
