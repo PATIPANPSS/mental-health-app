@@ -16,7 +16,7 @@ const EditEbook = () => {
     const fetchEbook = async () => {
       try {
         const response = await fetch(
-          `http://mental-health-server-production.up.railway.app/api/ebooks/${id}`
+          `https://mental-health-server-production.up.railway.app/api/ebooks/${id}`
         );
         if (!response.ok) {
           throw new Error("E-book not found");
@@ -64,7 +64,7 @@ const EditEbook = () => {
 
     try {
       const response = await fetch(
-        `http://mental-health-server-production.up.railway.app/api/ebooks/${id}`,
+        `https://mental-health-server-production.up.railway.app/api/ebooks/${id}`,
         {
           method: "PUT",
           body: form,

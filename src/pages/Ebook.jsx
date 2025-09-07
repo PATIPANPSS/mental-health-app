@@ -9,7 +9,7 @@ const Ebook = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("http://mental-health-server-production.up.railway.app/api/ebooks");
+        const response = await fetch("https://mental-health-server-production.up.railway.app/api/ebooks");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
