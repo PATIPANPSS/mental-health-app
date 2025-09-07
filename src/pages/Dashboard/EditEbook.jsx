@@ -16,7 +16,7 @@ const EditEbook = () => {
     const fetchEbook = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/ebooks/${id}`
+          `http://mental-health-server-production.up.railway.app/api/ebooks/${id}`
         );
         if (!response.ok) {
           throw new Error("E-book not found");
@@ -64,7 +64,7 @@ const EditEbook = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/ebooks/${id}`,
+        `http://mental-health-server-production.up.railway.app/api/ebooks/${id}`,
         {
           method: "PUT",
           body: form,
@@ -99,15 +99,15 @@ const EditEbook = () => {
     );
   }
 
-    // if (!ebook) {
-    //   return (
-    //     <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)] flex items-center justify-center">
-    //       <div className="bg-red-100 p-12 rounded-2xl shadow-xl border border-red-300 text-center text-red-700 text-xl font-semibold">
-    //         ไม่พบ E-book ที่ต้องการแก้ไข
-    //       </div>
-    //     </div>
-    //   );
-    // };
+    if (!ebook) {
+      return (
+        <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)] flex items-center justify-center">
+          <div className="bg-red-100 p-12 rounded-2xl shadow-xl border border-red-300 text-center text-red-700 text-xl font-semibold">
+            ไม่พบ E-book ที่ต้องการแก้ไข
+          </div>
+        </div>
+      );
+    };
 
   return (
     <div className="container mx-auto py-10 px-4 md:px-8 min-h-[calc(100vh-80px)]">

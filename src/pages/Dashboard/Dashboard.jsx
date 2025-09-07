@@ -124,7 +124,7 @@ const Dashboard = () => {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 mt-6 md:mt-10">
-            {/* การ์ดสำหรับจัดการ E-book */}
+            {/* จัดการ E-book */}
             <div className="bg-green-100 p-6 lg:p-8 rounded-xl shadow-lg border border-green-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-green-700 mb-2 md:mb-4 flex items-center">
@@ -150,7 +150,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            {/* การ์ดสำหรับจัดการแบบประเมิน */}
+            {/* จัดการแบบประเมิน */}
             <div className="bg-yellow-100 p-6 md:p-8 rounded-xl shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-yellow-700 mb-2 lg:mb-4 flex items-center">
@@ -170,11 +170,10 @@ const Dashboard = () => {
               </button>
             </div>
 
-            {/* การ์ดสำหรับดู Log/Activity */}
+            {/* Log/Activity */}
             <div className="bg-gray-100 p-6 lg:p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-700 mb-2 lg:mb-4 flex items-center">
-                  {/* <ChartBarIcon className="h-8 w-8 mr-3" /> */}
                   รายงานและ Log
                 </h3>
                 <p className="text-gray-700 mb-4 lg:mb-6 text-sm lg:text-base">

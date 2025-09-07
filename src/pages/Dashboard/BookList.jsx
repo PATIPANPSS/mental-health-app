@@ -11,7 +11,8 @@ const BookList = () => {
   const fetchBooks = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:8000/api/ebooks"); // mental-health-server-production.up.railway.app
+      const response = await fetch("http://mental-health-server-production.up.railway.app/api/ebooks"); // mental-health-server-production.up.railway.app
+      // localhost:8000
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -36,7 +37,7 @@ const BookList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("ยืนยันที่จะลบ E-book")) {
       try {
-        const response = await fetch(`http://localhost:8000/api/ebooks/${id}`, {
+        const response = await fetch(`http://mental-health-server-production.up.railway.app/api/ebooks/${id}`, {
           method: "DELETE",
         });
 

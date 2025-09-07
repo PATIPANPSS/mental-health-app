@@ -23,7 +23,7 @@ const AddEbook = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/ebooks", {
+      const response = await fetch("http://mental-health-server-production.up.railway.app/api/ebooks", {
         method: "POST",
         // เมื่อใช้ FormData, Browser จะตั้งค่า Content-Type: multipart/form-data ให้เอง ไม่ต้องระบุ
         // headers: { 'Content-Type': 'application/json' }, // ไม่ใช้สำหรับ FormData

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "../components/BookCard";
-import { Link } from "react-router-dom";
 
 const Ebook = () => {
   const [ebookData, setEbookData] = useState([]);
@@ -10,7 +9,7 @@ const Ebook = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/ebooks");
+        const response = await fetch("http://mental-health-server-production.up.railway.app/api/ebooks");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -42,10 +41,6 @@ const Ebook = () => {
       <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)] flex items-center justify-center">
         <div className="bg-red-100 p-12 rounded-2xl shadow-xl border border-red-300 text-center text-red-700 text-xl font-semibold">
           เกิดข้อผิดพลาดในการโหลด E-book: {error}
-          <p className="text-lg mt-4">
-            โปรดตรวจสอบว่า Backend Server ของคุณกำลังทำงานอยู่ และ URL ถูกต้อง (
-            <code className="font-mono">http://localhost:8000/api/ebooks</code>)
-          </p>
         </div>
       </div>
     );
