@@ -19,14 +19,12 @@ const Form2q = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // ตรวจสอบว่าผู้ใช้ตอบครบทุกคำถามหรือไม่
+
     if (Object.values(answers).some(answer => answer === null)) {
       setResult('กรุณาตอบคำถามให้ครบทุกข้อ');
       return;
     }
 
-    // ตรวจสอบผลลัพธ์
     if (answers.q1 === 'yes') {
       setResult('ท่านมีแนวโน้มเป็นโรคซึมเศร้า');
     } else {
@@ -51,8 +49,8 @@ const Form2q = () => {
                   onClick={() => handleChange(question.id, 'yes')}
                   className={`flex-1 px-6 py-3 rounded-lg border-2 font-semibold transition-all duration-200 ease-in-out
                     ${answers[question.id] === 'yes'
-                      ? 'bg-blue-600 text-white border-blue-600 scale-105 shadow-lg'
-                      : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-500'}`
+                      ? 'bg-blue-800 text-white border-blue-800 scale-105 shadow-lg'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-900'}`
                   }
                 >
                   มี
@@ -62,8 +60,8 @@ const Form2q = () => {
                   onClick={() => handleChange(question.id, 'no')}
                   className={`flex-1 px-6 py-3 rounded-lg border-2 font-semibold transition-all duration-200 ease-in-out
                     ${answers[question.id] === 'no'
-                      ? 'bg-blue-600 text-white border-blue-600 scale-105 shadow-lg'
-                      : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-500'}`
+                      ? 'bg-blue-800 text-white border-blue-800 scale-105 shadow-lg'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-900'}`
                   }
                 >
                   ไม่มี
@@ -74,22 +72,22 @@ const Form2q = () => {
 
           <button
             type="submit"
-            className="w-full flex justify-center py-4 px-6 border border-transparent rounded-lg shadow-sm text-xl font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105"
+            className="w-full flex justify-center py-4 px-6 rounded-lg text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition duration-300 hover:scale-105"
           >
             ส่งแบบประเมิน
           </button>
         </form>
 
         {result && (
-          <div className="mt-8 p-8 bg-blue-50 rounded-xl shadow-lg border-4 border-blue-200 text-center">
-            <h3 className="text-2xl font-bold text-blue-800 mb-2">ผลลัพธ์การคัดกรอง</h3>
+          <div className="mt-8 p-8 bg-gray-100 rounded-xl shadow-lg border-4 border-gray-300 text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-2">ผลลัพธ์การคัดกรอง</h3>
             <p className={`text-xl font-medium`}>{result}</p>
             {result === 'ท่านมีแนวโน้มเป็นโรคซึมเศร้า' && (
               <div className="mt-4">
                 <p className="text-lg text-gray-600">
                   <span className="font-semibold">ข้อแนะนำ:</span> ควรทำแบบประเมิน 9Q เพื่อให้ได้ผลลัพธ์ที่แม่นยำยิ่งขึ้น
                 </p>
-                <Link to="/assessments/9q" className="mt-2 inline-block px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all duration-300 ease-in-out">
+                <Link to="/form-9q" className="mt-2 inline-block px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800 transition duration-300 hover:scale-105">
                   ทำแบบประเมิน 9Q
                 </Link>
               </div>

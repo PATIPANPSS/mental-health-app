@@ -17,7 +17,7 @@ const FormPage = () => {
             <li>แบบคัดกรองโรคซึมเศร้า (2Q)</li>
           </Link>
           <Link
-            to={"/"}
+            to={"/form-8q"}
             className="my-5 block hover:text-blue-700 hover:underline hover:scale-105 tarnsition duration-200"
           >
             <li>แบบประเมินความการฆ่าตัวตาย (8Q)</li>
