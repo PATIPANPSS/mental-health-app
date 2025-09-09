@@ -29,7 +29,7 @@ const Ebook = () => {
     return (
       <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)] flex items-center justify-center">
         <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-200 text-center text-blue-700 text-2xl font-semibold">
-          กำลังโหลด E-book สุขภาพใจ...
+          กำลังโหลด E-book ...
           <div className="w-12 h-12 border-4 border-t-4 border-blue-500 border-solid rounded-full animate-spin mx-auto mt-4"></div>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Ebook = () => {
   return (
     <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)]">
       <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-200">
-        <h2 className="text-4xl font-bold text-blue-700 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-blue-900 mb-8 text-center">
           คลัง E-book (อ่านออนไลน์)
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">

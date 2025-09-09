@@ -13,11 +13,11 @@ const BookCard = ({ title, bookLink, imageUrl }) => {
           <img
             src={imageUrl}
             alt={title}
-            className="w-full h-fit object-cover rounded-lg mb-4 shadow-sm"
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/300x200/cccccc/333333?text=No+Image'; }} // Fallback image
+            className="w-min h-min object-cover rounded-lg mb-4 shadow-sm"
+            onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/300x200/cccccc/333333?text=No+Image'; }}
           />
         )}
-        <h3 className="text-xl font-semibold text-blue-600 mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-3">{title}</h3>
       </div>
     </a>
   );

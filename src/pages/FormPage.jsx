@@ -5,7 +5,7 @@ const FormPage = () => {
   return (
     <div className="container mx-auto py-16 px-8 min-h-[calc(100vh-80px)]">
       <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-200">
-        <h2 className="text-4xl font-bold text-blue-700 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-blue-900 mb-8 text-center">
           แบบประเมินสุขภาพจิต
         </h2>
 

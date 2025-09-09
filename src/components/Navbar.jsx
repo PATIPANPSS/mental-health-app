@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-3xl font-bold tracking-wide transition-transform transform hover:scale-105"
+          className="text-3xl font-bold tracking-wide transition hover:scale-105"
         >
           Mental-Health
         </Link>
@@ -58,19 +58,19 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-8">
           <Link
             to="/form"
-            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 ease-in-out hover:bg-white hover:shadow-md"
+            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 hover:bg-white hover:scale-105"
           >
             แบบประเมินสุขภาพ
           </Link>
           <Link
             to="/hotline"
-            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 ease-in-out hover:bg-white hover:shadow-md"
+            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 hover:bg-white hover:scale-105"
           >
             สายด่วนสุขภาพจิต
           </Link>
           <Link
             to="/ebook"
-            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 ease-in-out hover:bg-white hover:shadow-md"
+            className="text-white hover:text-blue-900 px-3 py-2 rounded-lg text-lg font-medium transition duration-300 hover:bg-white hover:scale-105"
           >
             E-book
           </Link>
@@ -82,24 +82,24 @@ const Navbar = () => {
         <div className="flex flex-col mt-6 mx-auto space-y-2">
           <Link
             to="/form"
-            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 ease-in-out hover:bg-white hover:shadow-md text-center"
+            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 hover:bg-white text-center"
             onClick={() => setIsOpen(false)}
           >
             แบบประเมินสุขภาพ
           </Link>
           <Link
             to="/hotline"
-            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 ease-in-out hover:bg-white hover:shadow-md text-center"
+            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 hover:bg-white text-center"
             onClick={() => setIsOpen(false)}
           >
             สายด่วนสุขภาพจิต
           </Link>
           <Link
             to="/ebook"
-            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 ease-in-out hover:bg-white hover:shadow-md text-center"
+            className=" hover:text-blue-900 px-30 py-2 rounded-lg text-lg font-medium transition hover:scale-105 duration-300 hover:bg-white text-center"
             onClick={() => setIsOpen(false)}
           >
-            อ่าน E-book ออนไลน์
+            E-book
           </Link>
         </div>
       </div>
